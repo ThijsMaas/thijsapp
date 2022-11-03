@@ -1,11 +1,13 @@
 from flask import Flask, render_template
 
 from .utils import get_data, get_content
-
-
-DATA = get_data("/data/db.txt")
+from os import environ
 
 app = Flask(__name__)
+
+DB_FILE = environ.get("DB_PATH", "/data/db.txt")
+
+DATA = get_data(DB_FILE)
 
 @app.route("/")
 def main():
