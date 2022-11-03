@@ -35,7 +35,7 @@ def get_content(data):
         today_str = f"🥳 Jaa! Vandaag {birthday_boys_str} jarig! 🎉"
         extra_str = f"Vergeet {pronoun} niet te feliciteren!"
     else:
-        today_str = f"Helaas! Vandaag is er geen Thijs jarig!"
+        today_str = f"😔 Helaas! Er geen Thijs jarig!"
 
         tomorrow_birthday_boys = data.get(tomorrow.strftime(TIME_FORMAT_DB), None)
         if tomorrow_birthday_boys is not None:
@@ -44,7 +44,7 @@ def get_content(data):
         else:
             next_date = get_next_birthday_boys_date(list(data.keys()))
             birthday_boys_str, _ = parse_names_with_verb(data[next_date])
-            extra_str = f"Nog even geduld, op {date_to_str(next_date)} {birthday_boys_str} jarig!"
+            extra_str = f"Nog even geduld, op {date_to_str(next_date)} is er weer een Thijs jarig!"
     return today_str, extra_str
 
 
