@@ -35,7 +35,7 @@ def get_content(data):
         today_str = f"🥳 Jaa! Vandaag {birthday_boys_str} jarig! 🎉"
         extra_str = f"Vergeet {pronoun} niet te feliciteren!"
     else:
-        today_str = f"😔 Helaas! Er geen Thijs jarig!"
+        today_str = f"😔 Helaas! Er is geen Thijs jarig!"
 
         tomorrow_birthday_boys = data.get(tomorrow.strftime(TIME_FORMAT_DB), None)
         if tomorrow_birthday_boys is not None:
